@@ -1,0 +1,11 @@
+DO
+$$
+DECLARE
+db_user TEXT = 'postgres';
+BEGIN
+    EXECUTE 'GRANT ALL ON SCHEMA task4 TO ' || db_user;
+    EXECUTE 'GRANT ALL ON ALL SEQUENCES IN SCHEMA task4 TO ' || db_user;
+    EXECUTE 'GRANT SELECT, UPDATE, INSERT ON ALL TABLES IN SCHEMA task4 TO ' || db_user;
+    EXECUTE 'GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA task4 TO ' || db_user;
+END
+$$;

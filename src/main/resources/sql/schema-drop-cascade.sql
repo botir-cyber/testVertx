@@ -1,0 +1,4 @@
+-- SCHEMA: task4
+
+DROP SCHEMA IF EXISTS task4 CASCADE;
+
